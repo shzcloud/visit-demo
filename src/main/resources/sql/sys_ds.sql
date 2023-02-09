@@ -8,18 +8,19 @@ DROP TABLE IF EXISTS `sys_ds`;
 CREATE TABLE `sys_ds`  (
   `id` bigint UNSIGNED NOT NULL COMMENT '主键',
   `name` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'DEFAULT' COMMENT '数据源名称',
+  `service_class_name` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL DEFAULT 'shz.jdbc.JdbcService' COMMENT '服务类全限定名',
   `driver_class_name` varchar(128) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '驱动类全限定名',
   `url` varchar(256) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '连接信息',
   `username` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '用户名',
   `password` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '密码',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `AK_ux_sys_ds_name`(`name`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '系统数据源' ROW_FORMAT = DYNAMIC;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '系统数据源' ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of sys_ds
 -- ----------------------------
-INSERT INTO `sys_ds` VALUES (8521978559332353, 'visit', 'com.mysql.cj.jdbc.Driver', 'jdbc:mysql://192.168.1.105:3306/visit?useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true', 'root', 'root');
+INSERT INTO `sys_ds` VALUES (8521978559332353, 'visit', 'shz.jdbc.service.NoLogJdbcService', 'com.mysql.cj.jdbc.Driver', 'jdbc:mysql://192.168.1.105:3306/visit?useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true', 'root', 'root');
 
 -- ----------------------------
 -- Table structure for sys_table_node

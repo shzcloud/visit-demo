@@ -15,7 +15,7 @@ import javax.validation.Valid;
  * 系统访问记录
  */
 @RestController
-@RequestMapping("/system/v1/visit")
+@RequestMapping("/v1/system/visit")
 public class VisitController {
     @Autowired
     VisitService visitService;
