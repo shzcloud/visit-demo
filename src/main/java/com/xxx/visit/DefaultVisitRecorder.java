@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import shz.visit.entity.SysVisit;
 import shz.visit.recorder.VisitRecorder;
+import shz.visit.service.VisitService;
 
 @Component
 class DefaultVisitRecorder implements VisitRecorder {

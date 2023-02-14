@@ -1,13 +1,13 @@
 package com.xxx.controller;
 
-import com.xxx.visit.QueryVisitVo;
-import com.xxx.visit.VisitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import shz.core.model.PageInfo;
 import shz.core.model.Response;
 import shz.spring.model.PageVo;
 import shz.visit.entity.SysVisit;
+import shz.visit.service.VisitService;
+import shz.visit.vo.QueryVisitVo;
 
 import javax.validation.Valid;
 

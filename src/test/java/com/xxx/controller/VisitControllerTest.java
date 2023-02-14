@@ -1,7 +1,6 @@
 package com.xxx.controller;
 
 import com.alibaba.fastjson2.JSON;
-import com.xxx.visit.QueryVisitVo;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -13,6 +12,7 @@ import org.springframework.test.web.servlet.request.MockHttpServletRequestBuilde
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import shz.spring.model.PageVo;
 import shz.visit.entity.SysVisit;
+import shz.visit.vo.QueryVisitVo;
 
 import java.nio.charset.StandardCharsets;
 

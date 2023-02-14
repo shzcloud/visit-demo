@@ -15,12 +15,12 @@ CREATE TABLE `sys_ds`  (
   `password` varchar(64) CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci NOT NULL COMMENT '密码',
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE INDEX `AK_ux_sys_ds_name`(`name`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '系统数据源' ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci COMMENT = '系统数据源' ROW_FORMAT = DYNAMIC;
 
 -- ----------------------------
 -- Records of sys_ds
 -- ----------------------------
-INSERT INTO `sys_ds` VALUES (8521978559332353, 'visit', 'shz.jdbc.service.NoLogJdbcService', 'com.mysql.cj.jdbc.Driver', 'jdbc:mysql://192.168.1.105:3306/visit?useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true', 'root', 'root');
+INSERT INTO `sys_ds` VALUES (9381587826376705, 'visit', 'shz.jdbc.service.NoLogJdbcService', 'com.mysql.cj.jdbc.Driver', 'jdbc:mysql://192.168.1.105:3306/visit?useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true&allowMultiQueries=true&serverTimezone=Asia/Shanghai&rewriteBatchedStatements=true&allowPublicKeyRetrieval=true', 'root', 'root');
 
 -- ----------------------------
 -- Table structure for sys_table_node
@@ -38,14 +38,14 @@ CREATE TABLE `sys_table_node`  (
 -- ----------------------------
 -- Records of sys_table_node
 -- ----------------------------
-INSERT INTO `sys_table_node` VALUES (9291617936867328, 'sys_visit', '0_0', 'visit');
-INSERT INTO `sys_table_node` VALUES (9291617936867329, 'sys_visit', '0_1', 'visit');
-INSERT INTO `sys_table_node` VALUES (9291617936867330, 'sys_visit', '0_2', 'visit');
-INSERT INTO `sys_table_node` VALUES (9291617936998400, 'sys_visit', '0_3', 'visit');
-INSERT INTO `sys_table_node` VALUES (9291665605263360, 'sys_visit_data', '0_0', 'visit');
-INSERT INTO `sys_table_node` VALUES (9291665605263361, 'sys_visit_data', '0_1', 'visit');
-INSERT INTO `sys_table_node` VALUES (9291665605263362, 'sys_visit_data', '0_2', 'visit');
-INSERT INTO `sys_table_node` VALUES (9291665605263363, 'sys_visit_data', '0_3', 'visit');
+INSERT INTO `sys_table_node` VALUES (9381600597377024, 'sys_visit', '0_0', 'visit');
+INSERT INTO `sys_table_node` VALUES (9381600597639168, 'sys_visit', '0_1', 'visit');
+INSERT INTO `sys_table_node` VALUES (9381600597639169, 'sys_visit', '0_2', 'visit');
+INSERT INTO `sys_table_node` VALUES (9381600597639170, 'sys_visit', '0_3', 'visit');
+INSERT INTO `sys_table_node` VALUES (9381602522955776, 'sys_visit_data', '0_0', 'visit');
+INSERT INTO `sys_table_node` VALUES (9381602523086848, 'sys_visit_data', '0_1', 'visit');
+INSERT INTO `sys_table_node` VALUES (9381602523086849, 'sys_visit_data', '0_2', 'visit');
+INSERT INTO `sys_table_node` VALUES (9381602523086850, 'sys_visit_data', '0_3', 'visit');
 
 -- ----------------------------
 -- Table structure for sys_table_node_transfer_info
