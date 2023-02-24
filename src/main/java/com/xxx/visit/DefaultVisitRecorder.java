@@ -25,11 +25,13 @@ class DefaultVisitRecorder extends KafkaAcceptor<SysVisit> implements VisitRecor
 
     @Override
     public void accept(SysVisit entity) {
+        //先推入kafka
         push(entity);
     }
 
     @Override
     protected void saveOffsetAndExecute(List<SysVisit> entities, TopicPartition partition, long offset) {
+        //消费kafka数据
         executor.execute(() -> execute0(entities, partition, offset));
     }
 
